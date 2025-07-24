@@ -1,0 +1,238 @@
+
+body{
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+@keyframes visible {
+   0%{
+    opacity: 0;
+   } 
+   95%{
+    opacity: 0;
+   } 
+   100%{
+    opacity: 1;
+   }
+}
+@keyframes highlight{
+    0%{
+        color: #e25555;
+       scale: 1;
+    }
+    50%{
+        color: #ffb89d;
+        scale: 1.1;
+    }
+    100%{
+        color: #e25555;
+        scale: 1;
+    }
+}
+@keyframes move {
+    0%{
+       transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100vh);
+        scale: 1.5;
+        opacity: 0;
+    }
+}
+@keyframes clicked{
+    0%{
+       scale: 1;
+    }
+    50%{
+        scale: 1.5;
+    }
+    100%{
+        scale: 1;
+
+    }
+}
+@keyframes rotate-change {
+    0%{
+        rotate: 0deg;
+        scale: 1;
+    }
+    50%{
+        rotate: 10deg;
+        scale: 1.1;
+        opacity: 0;
+    }
+    100%{
+        rotate: -10deg;
+        scale: 1;
+        opacity: 1;
+    }
+}
+#start_section{
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: aqua;
+    z-index: 1000000000000;
+}
+#start_text{
+    text-align: center;
+    width: 400px;
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    position: absolute;
+    left: calc(50vw - 200px);
+    top: 300px;
+}
+
+
+#start_img{
+    width: 200px;
+    position: absolute;
+    left: calc(50vw - 100px);
+    top: 20px;
+}
+#yes{
+
+    font-family: "Dancing Script", cursive;
+    position: absolute;
+    left: calc(50vw - 150px);
+    top: 450px;
+    font-size: 2rem;
+    background-color: #e25555;
+    color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    transition: 0.2s all;
+    opacity: 0;
+    animation: visible 5s forwards;
+}
+#yes:hover{
+    scale: 2 !important;
+}
+#no{
+    display: inline;
+    position: absolute;
+    left:   50vw ;
+    top: 470px;
+    font-size: 0.75rem;
+    background-color: #cf84f1;
+    color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    padding: 10px ;
+    transition: 0.2s all;
+    opacity: 0;
+    animation: visible 5s forwards;
+
+}
+#no:hover{
+    scale: 0.75;
+    
+}
+#deco{
+    
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/background.svg);
+    background-size: cover;
+    align-items: center;
+    justify-items: start;
+    
+}
+#deco p{
+    font-family: "Dancing Script", cursive;
+    position: absolute;
+    right: 2vw;
+    top: 30vh;
+    font-size: 30px;
+    font-weight: 100;
+    width: 50vw;
+   
+}
+#deco h1{
+    color: #e25555;
+    font-family: "Sriracha", cursive;
+    font-size: 25px;
+    z-index: 1000000;
+    width: 340px;
+    position: absolute;
+    bottom: 2vh;
+    left: calc(50vw - 170px);
+    right: calc(50vw - 170px);
+    animation: highlight 3s ease infinite;
+}
+
+#deco-tym{
+    position: absolute;
+    transform: translate(-25%,40%);
+    min-width: 300px;
+    width: 50vw;
+    display: flex;
+    z-index: 2 ;
+}
+#deco-img{
+    border:#ffb89d 10px solid;
+    z-index: 1;
+    rotate: 3deg;
+    border-radius: 25px;
+    position: absolute;
+    width: 15vw;
+    left: 20vw;
+    top:35vh;
+}
+#deco-iloveyou{
+    width: 60vw;
+    position: absolute;
+    top: -15vh;
+    right: 5vw;
+}
+#loop{
+    height: 50px;
+    width: 50px;
+    
+}
+.heart{
+    bottom: -15vh;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: #e25555;
+    clip-path: path("M 10,30 A 20,20 0 0,1 50,30 A 20,20 0 0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 Z");
+    -webkit-clip-path: path("M 10,30 A 20,20 0 0,1 50,30 A 20,20 0 0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 Z") ;
+    animation: move 15s ease-in forwards;
+    
+}
+.heart_clicked{
+    padding: 15px;
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    font-weight: 100;
+    max-width: 500px;
+    position: fixed;
+    height: fit-content;
+    background-color: #e25555;
+    color: aliceblue;
+    border: #e25555 2px solid;
+    border-radius: 50px;
+    animation: clicked 0.2s ease-in, move 15s ease-in forwards;
+    
+}
+.loop_img{
+    bottom: -35vh;
+    position: absolute;
+    display: inline;
+    width: 150px;
+    border: #fd48d0 3px solid;
+    border-radius: 20px;
+    animation: move 15s ease-in forwards;
+
+}
