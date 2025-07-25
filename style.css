@@ -35,7 +35,7 @@ body{
        transform: translateY(0);
     }
     100%{
-        transform: translateY(-100vh);
+        transform: translateY(-150vh);
         scale: 1.5;
         opacity: 0;
     }
@@ -75,7 +75,7 @@ body{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: aqua;
+    background-color: #f6f3e8;
     z-index: 1000000000000;
 }
 #start_text{
@@ -205,10 +205,10 @@ body{
     position: fixed;
     width: 200px;
     height: 200px;
-    background-color: #e25555;
+    background-color: #ff5592;
     clip-path: path("M 10,30 A 20,20 0 0,1 50,30 A 20,20 0 0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 Z");
     -webkit-clip-path: path("M 10,30 A 20,20 0 0,1 50,30 A 20,20 0 0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 Z") ;
-    animation: move 15s ease-in forwards;
+    animation: move 20s ease-in forwards;
     
 }
 .heart_clicked{
@@ -223,7 +223,7 @@ body{
     color: aliceblue;
     border: #e25555 2px solid;
     border-radius: 50px;
-    animation: clicked 0.2s ease-in, move 15s ease-in forwards;
+    animation: clicked 0.2s ease-in, move 20s ease-in forwards;
     
 }
 .loop_img{
@@ -233,6 +233,6 @@ body{
     width: 150px;
     border: #fd48d0 3px solid;
     border-radius: 20px;
-    animation: move 15s ease-in forwards;
+    animation: move 17s ease-in forwards;
 
 }

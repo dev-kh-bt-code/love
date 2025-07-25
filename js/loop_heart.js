@@ -13,10 +13,8 @@ yes_btn3.addEventListener("click", ()=>{
       document.querySelectorAll(".heart").forEach((el) => {
         if (window.getComputedStyle(el).opacity === "0") {
           el.style.display = "none"; // hoặc el.remove()
-        }
-        
+        }       
       });
 
-  }, 1000); // 2000ms = 2 giây
-  
+  }, 1000); 
 });
